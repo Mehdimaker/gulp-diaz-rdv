@@ -1,0 +1,204 @@
+$font-stack:    Helvetica, sans-serif
+
+$diaz: #29aa8d
+
+$dark-color: darken( $diaz, 10% )
+$light-color: lighten( $diaz, 10% )
+
+$color1: black
+$color2: red
+$color3: blue
+
+.bgdiaz
+	background-color: $diaz!important
+	color: white!important
+.colordiaz
+	color: $diaz!important
+
+body
+	font: 100% $font-stack
+section
+	min-height: 100vh
+	position: relative
+	padding-top: 90px!important	
+	padding-bottom: 90px!important	
+	background-color: white
+
+	h1.ui.header
+		font-size: 40px
+		margin-bottom: 100px!important
+	.myContainer
+		position: absolute
+		margin: auto
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+h1
+	color: $color1
+
+/////////////////// HOME ///////////////////
+
+#home
+	height: 100vh
+	padding-top: 50px
+	position: relative
+	.bgimg
+		position: fixed
+		top: 0
+  	left: 0
+  	right: 0
+  	z-index: -2000
+		height: 100%
+		width: 100%
+		background: url('../img/background.jpg') fixed
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover 
+	
+		-webkit-filter: blur(4px)
+	  -moz-filter: blur(4px)
+	  -o-filter: blur(4px)
+	  -ms-filter: blur(4px)
+	  filter: blur(4px)
+	.bgblack
+		position: absolute
+		top: 0
+  	left: 0
+  	right: 0
+  	z-index: 2
+		height: 100%
+		width: 100%
+		background-color: rgba(255,255,255,0.5);
+	.ui.text.container
+		height: 50%
+		max-width: 100% !important
+		position: absolute
+		margin: auto
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		h1
+			font-size: 70px
+			span
+				color: $diaz
+		p
+			font-size: 25px
+			font-style: italic
+		.ui.button
+			background-color: $diaz
+			margin-bottom: 5px;
+
+
+
+section#one
+	position: relative
+	background-color: $diaz
+	color: white
+	h1.ui.header
+		color: white
+	h2
+		color: white!important
+ 
+.bghand
+	height: 100vh
+	z-index: 1
+	position: relative
+	background: url('../img/bghand.jpg') fixed
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover 
+	
+
+
+section#three
+	position: relative
+	background-color: $diaz
+	h1.ui.header
+		color: white
+
+section#four
+	min-height: 100%
+/////////////////// NAVBAR ///////////////////
+.navone,.navtwo
+	height: 50px
+	transition: all 0.5s ease!important
+	-webkit-transition: all 0.5s ease!important
+	-moz-transition: all 0.5s ease!important
+	-o-transition: all 0.5s ease!important
+
+	.item.img
+		vertical-align: middle !important
+		height: 50px !important
+
+.navone
+	border-color: transparent!important
+	.ui.header.logo
+		display: none;
+.navtwo
+	background-color: white!important
+	.ui.header.logo
+		font-size: 23px
+		margin-left: 10px
+		vertical-align: middle !important
+		height: 50px !important
+		display: block;
+		span
+			color: $diaz
+	a.item
+		color: black !important
+
+.ui.right.sidebar
+	padding-top: 50px!important
+.ui.top.fixed.menu .right.menu .toc.item  ,
+.secondary.menu .right.menu .toc.item 
+	display: none 
+
+#navicon.btn
+	overflow: hidden
+	position: absolute
+	z-index: 5
+	height: 50px
+	width: 50px
+	border: none
+	text-decoration: none
+	font-size: 30px
+	background-color: transparent
+	top: 0px
+	right: 0px
+	padding-right: 0px
+	padding-top: 7px
+	svg
+		padding: 0px
+		fill: currentColor
+		display: block
+		height: 100%
+		width: 100%
+		position: absolute
+		-webkit-transition: color 250ms, -webkit-transform 500ms
+		transition: color 250ms, transform 500ms
+		top: 0
+		left: 0
+	&.open
+		#ht
+			-webkit-transform: translate(-10%, 10%) rotate(45deg)
+			-ms-transform: translate(-10%, 10%) rotate(45deg)
+			transform: translate(-10%, 10%) rotate(45deg)
+		#hm
+			-webkit-transform: translateX(100%)
+			-ms-transform: translateX(100%)
+			transform: translateX(100%)
+		#hb
+			-webkit-transform: translate(-10%, -10%) rotate(-45deg)
+			-ms-transform: translate(-10%, -10%) rotate(-45deg)
+			transform: translate(-10%, -10%) rotate(-45deg)
+
+@media only screen and (max-width: 700px) 
+	.ui.top.fixed.menu .ui.item,
+	.secondary.menu .ui.item
+		display: none !important
+	.ui.top.fixed.menu .right.menu .toc.item ,
+	.secondary.menu .right.menu .toc.item 
+		display: block !important
+		
