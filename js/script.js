@@ -19,7 +19,7 @@ $(document).ready(function() {
       }
     });
 
-
+  
   // Create sidebar and attach to menu open
   $('.ui.sidebar').sidebar({
     'closable':false    
@@ -189,66 +189,7 @@ $(document).ready(function() {
 
   });
 
-$('.ui.form').form({
-    onSuccess : function(e){
-        e.preventDefault();
-        var post = {            
-            nom: $(e.target).find('[name=nom]').val(),  
-            tel: $(e.target).find('[name=tel]').val(),            
-            profession: $(e.target).find('[name=profession]').val(),
-            date: $(e.target).find('[name=date]').val(),             
-        };
-    
-    console.log(post)
 
-    },
-    fields: {
-      nom: {
-        identifier: 'nom',
-        rules: [
-          {
-            type   : 'empty',
-            prompt : "Merci d'entrer votre nom"
-          },
-          {
-            type   : 'minLength[4]',
-            prompt : 'Votre nom doit avoir plus de {ruleValue} caractères'
-          }
-        ]
-      } ,   
-       tel: {
-        identifier: 'tel',
-        rules: [
-          {
-            type   : 'number',
-            prompt : "Merci dentrer un numéro de téléphone valide"
-          },
-           {
-            type   : 'empty',
-            prompt : "Merci d'entrer un numéro"
-          }
-        ]
-      } , 
-       profession: {
-        identifier: 'profession',
-        rules: [
-          {
-            type   : 'empty',
-            prompt : "Merci d'entrer une profession"
-          }
-        ]
-      } , 
-       date: {
-        identifier: 'date',
-        rules: [
-          {
-            type   : 'empty',
-            prompt : "Merci de choisir une date"
-          }
-        ]
-      } 
-    }
-  });
 
 
 });
